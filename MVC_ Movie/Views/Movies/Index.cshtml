@@ -1,0 +1,68 @@
+﻿@model List<Movie>
+@{ViewData["Title"] = "Rented Movies";}
+
+    <div class="text-center">
+  <h1 class="text-warning">List of Rented Movies</h1>
+</div>
+
+
+
+@*
+<table class="table">
+    <tr>
+        <td>Title</td>
+        <td>Genre</td>
+        <td>Customer</td>
+        <td>Movie info</td>
+        <td>Edit</td>
+        <td>Delete</td>
+    </tr>
+
+
+
+@foreach(var item in Model) {
+    <tr>
+        <td>
+            @item.Title<br/>
+        </td>
+        <td>
+            @item.Genre<br/>
+        </td
+        ><td>
+            @item.Customer.Name<br/>
+        </td>
+        <td>
+            <a asp-action="Details" asp-route-id="@item.Id">Details</a>
+        </td>
+        <td>
+            <a asp-action="Edit" asp-route-id="@item.Id">Edit</a><br />
+        </td>
+        <td>
+            <a asp-action="Delete" asp-route-id="@item.Id">Delete</a><br />
+        </td>
+     </tr>
+}
+
+</table>*@
+
+@*@foreach(Movie item in Model){
+    @item.Title<br/>
+    <a asp-action="Edit" asp-route-id="@item.Id">Edit</a><br />
+    <a asp-action="Delete" asp-route-id="@item.Id">Delete</a><br />
+}*@
+<div class="nav-rapper">
+                @foreach(var item in Model)
+{
+  <div class="card" style="width: 16rem; ">
+     <img src="@item.PicUrl">
+        <div class="card-body">
+    <h5 class="card-title">@item.Title</h5>
+    <p class="card-text">@item.Genre</p>
+    @* <a class="btn btn-primary" asp-area="" asp-controller="Movies" asp-action="Details">GO TO</a>*@
+      <a class="btn btn-primary" asp-action="Details" asp-route-id="@item.Id">Go To</a><br />
+   @* <a href="#" class="btn btn-primary">Go somewhere</a>*@
+        </div>
+    </div>
+
+}
+</div>

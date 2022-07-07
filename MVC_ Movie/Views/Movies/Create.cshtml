@@ -1,0 +1,18 @@
+﻿@model Movie
+@{
+    ViewData["Title"] = "Rent Movie";
+}
+
+<h1 class="text-warning">Rent Movie</h1>
+<div>
+    <form asp-action="Create">
+        <input type="text" placeholder="Title" name="title" />
+        <input type="text" placeholder="Genre" name="genre" />
+        <input type="url" placeholder="URL" name="picurl" />
+        @*<input type="file" placeholder="Choose File" name="picurl"/>*@
+        @*<select asp-for="CustomerId" name="customerid" asp-items="ViewBag.CustomerId" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"></select>*@
+        <select asp-for="CustomerId" name="customerid" asp-items="ViewBag.CustomerId" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"></select>
+        @*<select asp-for="CustomerId" name="Customerid" asp-items="ViewBag.CustomerId"></select>*@
+        <input class="btn btn-primary" type="submit" value="Create" />
+    </form>
+</div>

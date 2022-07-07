@@ -1,0 +1,14 @@
+﻿@model Customer
+@{ViewData["Title"] = "Create Customer";}
+
+
+<h1 class="text-success">Create new Customers</h1>
+
+@*<div>This is where we create new Customers</div>*@
+
+<form asp-action="Create">
+    <input type="text" placeholder="Name" name="name" />
+    <input type="text" placeholder="Address" name="address" />
+    <input type="text" placeholder="TelePhone" name="telefonnumber" />
+    <input class="btn btn-primary" type="submit" value="Create" />
+</form>

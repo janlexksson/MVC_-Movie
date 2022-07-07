@@ -1,0 +1,157 @@
+﻿@model List<Movie>
+@{
+    ViewData["Title"] = "Home Page for:";
+}
+@*
+<div class="text-center">
+    <h1 class="display-4 text-primary">Mostly Movies</h1>
+</div>
+*@
+
+@*<div class="card" style="width: 18rem;">
+    <img class="card-img-top" src="~/images/Aladdin.jpg" alt="Card image cap">
+        <div class="card-body">
+    <h5 class="card-title"></h5>
+    <p class="card-text">This is the best movie</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+    </div>*@
+
+@*    @foreach(var item in Model)
+{
+  <div class="card" style="width: 18rem;">
+    <img class="card-img-top" src="~/images/Aladdin.jpg" alt="Card image cap">
+        <div class="card-body">
+    <h5 class="card-title">@item.Title</h5>
+    <p class="card-text">@item.Genre</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+    </div>
+
+}*@
+
+<div@* class="nav-rapper row-cols-2"*@>
+
+    @* <div>
+    @*<img src="~/images/Aladdin.jpg" class="w-100" asp-append-version="true" width="300px" height="250px"/>
+    <a class="btn btn-primary mt-1" asp-page="" asp-route-ImageTitle="" asp-route-PizzaPrice=>Rent this one</a>
+    </div>
+
+    <div>
+    <img class="mainImage" src="~/images/Batman.jpg" />
+    </div>
+
+    <div>
+    </div>
+
+    <div>
+    </div>
+
+    <div>
+    </div>
+
+    <div>
+    </div>
+    *@
+
+    @*
+
+
+    </div>
+    <div class="container">
+    <div class="row">
+    <div class="col">Column<div>
+    </div></div>
+    <div class="col">Column
+    <div>
+    </div></div>
+    <div class="w-100"></div>
+    <div class="col">Column</div>
+    <div class="col">Column</div>
+    </div>
+    </div>
+    *@
+    
+<div class="text-center">
+    <h1 class="display-5 text-primary">Mostly Movies</h1>
+
+    <div class="row col-9 m-auto mb-2">
+        <div class="col mb-2">
+            <img class="mainImage" src="~/images/Top Gun Maverick.jpg" />
+        </div>
+        <div class="col mb-2">
+            <img class="mainImage" src="~/images/Batman.jpg" />
+        </div>
+        <div class="col mb-2">
+            <img class="mainImage" src="~/images/Uncharted.jpg" />
+        </div>
+        <div class="col mb-2">
+            <img class="mainImage" src="~/images/The Fifth Element.jpg" />
+        </div>
+        <div class="col mb-2">
+            <img class="mainImage" src="~/images/The Simpsons Movie.jpg" />
+        </div>
+        <div class="col mb-2">
+            <img class="mainImage" src="~/images/Bee Movie.jpg" />
+        </div>
+        <div class="col mb-2">
+            <img class="mainImage" src="~/images/Sonic 2.jpg" />
+        </div>
+        <div class="col mb-2">
+            <img class="mainImage" src="~/images/Aladdin.jpg" />
+        </div>
+
+    </div>
+
+</div>
+
+
+
+    @*               @foreach(var item in Model)
+    {
+    <div class="card" style="width: 16rem; ">
+    <img src="@item.PicUrl">
+    <div class="card-body">
+    <h5 class="card-title">@item.Title</h5>
+    <p class="card-text">@item.Genre</p>
+    <a class="btn btn-primary" asp-area="" asp-controller="Movies" asp-action="Details">GO TO</a>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+    </div>
+    </div>
+
+    }*@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    @*
+    @foreach(var item in Model.)
+    {
+    <div class="card" style="width: 18rem;">
+    <img class="card-img-top" src="~/images/Aladdin.jpg" alt="Card image cap">
+    <div class="card-body">
+    <h5 class="card-title">@item.title</h5>
+    <p class="card-text">@item.description</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+    </div>
+    </div>
+
+    }*@
+
+    @*@foreach(var pizza in Model.fakePizzaDB)
+    {
+    var imagePath = "~/images/pizza/" + (pizza.ImageTitle + ".jpg");
+    <div class="col-4 mb-5">
+    <img src="@imagePath" class="w-100" asp-append-version="true" width="300px" height="250px"/>
+    <a class="btn btn-primary mt-1" asp-page="Checkout/Checkout" asp-route-ImageTitle="@pizza.ImageTitle" asp-route-PizzaPrice=@pizza.FinalPrice>Order this one</a>
+    <br />*@

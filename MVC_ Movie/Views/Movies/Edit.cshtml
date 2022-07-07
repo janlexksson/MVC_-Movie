@@ -1,0 +1,11 @@
+﻿@model Movie
+@*@model ViewModelAllDetails*@
+
+<form asp-action="Edit">
+    <input type="text"  value="@Model.Id" />
+    <input type="text" name="title" value="@Model.Title" />
+    <input type="text" name="genre" value="@Model.Genre" />
+     <select asp-for="CustomerId" name="Customerid" asp-items="ViewBag.CustomerId"></select>
+    <input type="submit" value="Update" />
+
+</form>

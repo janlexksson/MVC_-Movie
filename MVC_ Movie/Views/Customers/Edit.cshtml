@@ -1,0 +1,15 @@
+﻿@model Customer
+
+<form asp-action="Edit">
+    <input type="text" value="@Model.Id" />
+    <input type="text" name="name" value="@Model.Name" />
+    <input type="text" name="address" value="@Model.Address" />
+    <input type="text" name="telefonnumber" value="@Model.TelefonNumber" />
+    <input type="submit" value="Update" />
+
+</form>
+
+
+
+
+

@@ -1,0 +1,52 @@
+﻿@model List<Customer>
+@{ViewData["Title"] = "Customers";}
+<h1 class="text-success">List of Our Customers</h1>
+
+<table class="table">
+    <tr>
+        <td>Name</td>
+        <td>Address</td>
+        <td>Telephone</td>
+        <td>Rented Movies</td>
+        <td>Edit</td>
+        <td>Delete</td>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @item.Name<br />
+            </td>
+            <td>
+                @item.Address<br />
+            </td>
+            <td>
+                @item.TelefonNumber<br />
+            </td>
+            <td>
+                <a asp-action="Details" asp-route-id="@item.Id">Details</a>
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a><br />
+            </td>
+            <td>
+                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a><br />
+            </td>
+           @* <td>
+                <a asp-action="Details2" asp-route-id="@item.Id">Details</a>
+            </td>
+            <td>
+                <a asp-action="Edit2" asp-route-id="@item.Id">Edit</a><br />
+            </td>
+            <td>
+                <a asp-action="Delete2" asp-route-id="@Model.Movie.Id">Delete</a><br />
+            </td>*@
+        </tr>
+    }
+</table>
+@*@foreach(Customer item in Model){
+    @item.Name<br/>
+    <a asp-action="Edit" asp-route-id="@item.Id">Edit</a><br />
+    <a asp-action="Delete" asp-route-id="@item.Id">Delete</a><br />
+}*@
